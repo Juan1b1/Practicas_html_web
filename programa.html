@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<h1>Programa</h1>
+
+<script>
+//Este código calcula las edades de los trabajadores.
+    function saltarlinea() {
+        document.write("<br><br><br><br>");
+    };
+//function lo podemos útilizar como una macro ya que podemos darle la que configuración que deseemos a otra función ejemplo: en vez de colocar document.write podemos crear la función "imprimir" y está hará lo mismo, se pueden colocar varias funciones dentro de la misma.
+    function imprimir(texto){
+        document.write(texto)
+    };
+
+    var enter="<br><br>";
+
+    imprimir("Hola amigos");
+    document.write(enter);
+
+//Con var podemos crear variables teniendo encuenta el siguiente formato.
+    var anho=2025;
+    var enter="<br><br>";
+//Usando document.write("*"); podemos mostrar texto en la página web.
+    document.write("Juan tiene: " + (anho-2000) + " años");
+    document.write(enter);
+    document.write("Pedro tiene: " + (anho-1995) + " años");
+
+    anho = 2030
+
+    document.write(enter);
+//Si quiero colocar texto y agregar una función tengo que usar el signo de + para agregarla correctamente y si luego de la función quiero ver más texto, cierro con otro + al terminar la función.
+    document.write("Carlos tiene: " + (anho-2005) + " años");
+
+    saltarlinea();
+
+    anho=2020
+//En javascript se toma directa menta los números como operaciones a menos que estos se pongan entre comillas y pasen a formato de texto.
+    document.write("Jimena tiene: " + (anho-2010) + " años");
+    document.write(enter);
+
+    document.write("Paola tiene: " + (anho-1995) + " años");
+    document.write(enter);
+
+    document.write("Laura tiene: " + (anho-2005) + " años");
+    document.write(enter);
+
+    var edadJimena=10;
+    var edadPaola=25;
+    var edadLaura=15;
+
+    var nombre1 = "Jimena";
+    var nombre2 = "Paola";
+    var nombre3 = "Laura";
+
+    promedio=(edadJimena+edadPaola+edadLaura)/3
+
+    document.write("El promedio de las edades de: " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedio));
+    document.write("<br>");
+
+</script>

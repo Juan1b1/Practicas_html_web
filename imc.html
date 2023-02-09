@@ -1,0 +1,82 @@
+<meta charset="UTF-8">
+
+<h1>Programa calcular IMC</h1>
+
+<script>
+    function saltarLinea() {
+    document.write("<br><br>");
+};
+    function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+};
+
+//Dos formas de hacer el calculo con o sin asigar otra función.
+//Importante colocar los parametros que necesito operar, y usar el return para poder imprimir en la web.
+//*function calcularImc(peso,altura){
+//    imc=peso/(altura*altura);
+//    return(imc);
+//};
+
+//Forma con función.
+//pesoJuan=68
+//alturaJuan=1.70
+//imcJuan=calcularImc(pesoJuan,alturaJuan);
+//imprimir("El IMC de Juan es: " + imcJuan);
+
+//Forma manual.
+//pesoFelipe=75
+//alturaFelipe=1.73
+//imcFelipe=pesoFelipe/(alturaFelipe*alturaFelipe);
+
+//imprimir("El IMC de Felipe es: " + imcFelipe);
+
+//Forma más corta con funcion.
+//function calcularImc(peso,altura,nombre){
+//   imc=peso/(altura*altura);
+//    imprimir("El imc calculado de " + nombre + " es " + imc);
+//};
+
+//calcularImc(70,1.60,"Marlen");
+//calcularImc(50,1.40,"Anthonela");
+
+//Forma más corta:
+function calcularImc(peso,altura){
+    return (peso / (altura * altura));
+};
+
+//    imprimir("El promedio del imc calculado de Christian y Felipe es: " + (calcularImc(71,1.72)+calcularImc(75,1.73))/2);
+
+//    imprimir("El promedio del imc calculado de Gabriela y Luisa es: " + (calcularImc(60,1.68)+calcularImc(50,1.59))/2);
+
+//Forma corta y usando la opción donde el usuario puede ingresar su información por medio de ventanas emergentes.
+
+nombre = prompt("¿Cuál es su nombre?");
+pesoInformado = prompt(nombre + ", ¿Cuál es su peso?");
+alturaInformada = prompt(nombre + ", ¿Cuál es su altura?");
+
+imcCalculado = calcularImc(pesoInformado,alturaInformada);
+
+imprimir(nombre + ", su imc calculado es: " + imcCalculado);
+
+if (imcCalculado < 18.5){
+    imprimir("Su IMC está por de bajo de lo recomendado.");
+};
+
+if (imcCalculado >= 18.5){
+    if(imcCalculado < 25){
+        imprimir("Su IMC está dentro de lo recomendado.");
+    };
+};
+
+if (imcCalculado >= 25){
+    if(imcCalculado < 30){
+        imprimir("Su IMC se considera como sobrepeso.");
+    };
+};
+
+if (imcCalculado >= 30){
+    imprimir("Su IMC se considera como obesidad.");
+};
+
+</script>
